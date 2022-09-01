@@ -1,0 +1,5 @@
+Reference, Value, Footprint, Datasheet
+"K2","TS3A44159","Package_SO:TSSOP-16_4.4x5mm_P0.65mm","http://www.ti.com/lit/ds/symlink/ts3a44159.pdf?ts=1587831159497"
+"K1","TS3A44159","Package_SO:TSSOP-16_4.4x5mm_P0.65mm","http://www.ti.com/lit/ds/symlink/ts3a44159.pdf?ts=1587831159497"
+"U2","MAX31865","Package_SO:SSOP-20_5.3x7.2mm_P0.65mm","https://datasheets.maximintegrated.com/en/ds/MAX31865.pdf"
+"U3","MAX31865","Package_SO:SSOP-20_5.3x7.2mm_P0.65mm","https://datasheets.maximintegrated.com/en/ds/MAX31865.pdf"

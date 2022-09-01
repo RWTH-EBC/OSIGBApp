@@ -1,0 +1,11 @@
+# Folders
+build/
+aio/
+dio/
+tmp/
+.vscode/*
+
+# Files
+sdkconfig
+sdkconfig.old
+sdkconfig.orig

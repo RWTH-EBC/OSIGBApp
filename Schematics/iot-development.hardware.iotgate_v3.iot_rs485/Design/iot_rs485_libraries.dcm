@@ -1,0 +1,20 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP MAX13487
+D RS485 transceiver, half duplex, dual supply, receiver/driver enable, 500kbps, SOIC-08 package
+K rs485 transceiver
+F https://datasheets.maximintegrated.com/en/ds/MAX13430E-MAX13433E.pdf
+$ENDCMP
+#
+$CMP RT424024
+D Power PCB Relay RT2 DC and A
+K Dual Pole Relay
+F https://eu.mouser.com/datasheet/2/418/NG_DS_RT2_1014-728141.pdf
+$ENDCMP
+#
+$CMP VXO78-500-M
+D NON-ISOLATED DC SWITCHING REGULATOR
+F https://eu.mouser.com/datasheet/2/670/vxo78-500-m-1729064.pdf
+$ENDCMP
+#
+#End Doc Library

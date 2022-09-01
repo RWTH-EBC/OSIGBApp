@@ -1,0 +1,54 @@
+\definecolor{lightblue}{rgb}{.3,.5,1}
+\definecolor{orange}{rgb}{1,.7,0}
+\definecolor{darkorange}{rgb}{1,.4,0}
+\definecolor{darkgreen}{rgb}{0,.4,0}
+\definecolor{gray}{rgb}{.3,.3,.3}
+
+\definecolor{blue}{rgb}{0,0,1}
+\definecolor{red}{rgb}{1,0,0}
+\definecolor{pink}{rgb}{.933,0,.933}
+\definecolor{green}{rgb}{0.133,0.545,0.133}
+\definecolor{darkblue}{rgb}{0,0,.4}
+\definecolor{darkred}{rgb}{.56,0,0}
+\definecolor{darkgray}{rgb}{.2,.2,.2}
+\definecolor{shadecolor}{gray}{0.925}
+\lstdefinelanguage{modelica}{%
+    alsoletter={...},%
+    %otherkeywords={-, =, +, [, ], (, ), \{, \}, :, *, !},%
+    morekeywords=[1]{},% blue Keywords
+    morekeywords=[2]{% blue + bold keywords
+        annotation,assert,block,class,connector,constant,discrete,%
+        else,elseif,elsewhen,end,exit,extends,external,final,flow,for,%
+        function,if,in,inner,input,import,loop,model,nondiscrete,outer,%
+        output,package,parameter,partial,record,redeclare,replaceable,return,%
+        size,terminate,then,type,when,while,algorithm,equation,%
+        protected,public,and,false,not,or,true},%
+    morekeywords=[3]{% red keywords
+        abs,acos,asin,atan,atan2,connect,cos,cosh,cross,der,edge,exp,%
+        initial,noEvent,pre,reinit,sample,sign,sin,sinh,tan,tanh,terminal,%
+        start,Real,Integer,Boolean,String,Modelica.Icons.Function,
+        ThermodynamicState},%
+    comment=[l][\color{darkgreen}]{//}, % comment lines
+    morecomment=[s][\color{darkgreen}]{/*}{*/}, % comment blocs
+    morestring=[b][\color{darkgreen}]{'}, %
+    morestring=[b][\color{darkgreen}]{"},
+}[keywords,comments,strings]
+\lstset{
+	basicstyle={\ttfamily\footnotesize},  	% use font and smaller size \small \footnotesize
+	showstringspaces=false,									% do not emphasize spaces in strings
+	tabsize=4,															% number of spaces of a TAB
+	frame=single,
+	mathescape=false,%escapechar=§,					% escape to latex with §...§
+	upquote=true,														% upright quotes
+	aboveskip={1.0\baselineskip},						% a bit of space above
+	columns=fixed,													% nice spacing -> fixed / flexible
+	texcl=false%
+		backgroundcolor=\color{shadecolor},
+		keywordstyle=[1]\color{blue},						% keywords
+		keywordstyle=[2]\color{blue}\bfseries,	% keywords
+		keywordstyle=[3]\color{red},						% keywords
+		keywordstyle=[4]\color{pink},						% keywords
+		keywordstyle=[5]\color{darkblue}\bfseries,	% keywords
+		commentstyle=\color{green},							% comments
+		stringstyle=\color{red}									% strings
+	}	

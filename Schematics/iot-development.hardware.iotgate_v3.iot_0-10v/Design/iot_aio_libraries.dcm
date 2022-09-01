@@ -1,0 +1,60 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP MAX13487
+D RS485 transceiver, half duplex, dual supply, receiver/driver enable, 500kbps, SOIC-08 package
+K rs485 transceiver
+F https://datasheets.maximintegrated.com/en/ds/MAX13430E-MAX13433E.pdf
+$ENDCMP
+#
+$CMP MCP3021
+D Low Power 10-Bit A/D Converter With I2C™ Interface
+K SAR ADC Converter 10bit I2C  1ch
+F https://eu.mouser.com/datasheet/2/268/21805a-74229.pdf
+$ENDCMP
+#
+$CMP NCS2004
+D 3.5 MHz, Wide Supply, Rail-to-Rail Output Operational Amplifier
+K single opamp low-power
+F https://eu.mouser.com/datasheet/2/308/NCS2004-D-1812735.pdf
+$ENDCMP
+#
+$CMP RT424024
+D Power PCB Relay RT2 DC and A
+K Dual Pole Relay
+F https://eu.mouser.com/datasheet/2/418/NG_DS_RT2_1014-728141.pdf
+$ENDCMP
+#
+$CMP SW_DIP_1x01
+D 1x DIP Switch, Single Pole Single Throw (SPST) switch, small symbol
+K dip switch
+F ~
+$ENDCMP
+#
+$CMP SW_DIP_1x02
+D 1x DIP Switch, Single Pole Single Throw (SPST) switch, small symbol
+K dip switch
+F ~
+$ENDCMP
+#
+$CMP SW_DIP_1x03
+D 1x DIP Switch, Single Pole Single Throw (SPST) switch, small symbol
+K dip switch
+F ~
+$ENDCMP
+#
+$CMP TLV07IDR
+D 36-V Precision, Rail-to-Rail Output Operational Amplifier
+F http://www.ti.com/lit/ds/symlink/tlv07.pdf
+$ENDCMP
+#
+$CMP TLV333IDCKR
+D Single Low-Noise Operational Amplifiers,SOT-353_SC-70-5
+K single opamp
+$ENDCMP
+#
+$CMP VXO78-500-M
+D NON-ISOLATED DC SWITCHING REGULATOR
+F https://eu.mouser.com/datasheet/2/670/vxo78-500-m-1729064.pdf
+$ENDCMP
+#
+#End Doc Library

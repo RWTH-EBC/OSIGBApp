@@ -1,0 +1,713 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 3
+Title "IoT Wireless Adapter - AIO"
+Date "2020-04-20"
+Rev ""
+Comp "ACS/EBC - RWTH Aachen University"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text Label 9450 5000 0    50   ~ 0
+AI
+Text Label 9450 5400 0    50   ~ 0
+AO
+$Comp
+L iot_aio_libraries:RT424024 K1
+U 1 1 5E978B2F
+P 8550 5400
+F 0 "K1" V 9317 5400 50  0000 C CNN
+F 1 "RT424024" V 9226 5400 50  0000 C CNN
+F 2 "iot_aio:Relay_DPDT_RT424024" V 7650 5400 50  0000 C CNN
+F 3 "https://eu.mouser.com/datasheet/2/418/NG_DS_RT2_1014-728141.pdf" H 8550 5400 50  0001 C CNN
+	1    8550 5400
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	8850 5000 9450 5000
+Wire Wire Line
+	9450 5000 9450 5150
+Wire Wire Line
+	8850 5400 9450 5400
+Wire Wire Line
+	9450 5400 9450 5250
+Wire Wire Line
+	8250 5300 7300 5300
+Wire Wire Line
+	7300 5300 7300 5250
+Wire Wire Line
+	8250 4900 7300 4900
+Wire Wire Line
+	7800 5500 8250 5500
+Wire Wire Line
+	7800 5100 8250 5100
+Wire Wire Line
+	8850 5800 9300 5800
+$Comp
+L power:GND #PWR?
+U 1 1 5E99E0A6
+P 8100 5950
+AR Path="/5CBA8F72/5E99E0A6" Ref="#PWR?"  Part="1" 
+AR Path="/5E99E0A6" Ref="#PWR024"  Part="1" 
+F 0 "#PWR024" H 8100 5700 50  0001 C CNN
+F 1 "GND" H 8105 5777 50  0000 C CNN
+F 2 "" H 8100 5950 50  0001 C CNN
+F 3 "" H 8100 5950 50  0001 C CNN
+	1    8100 5950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8250 5800 8100 5800
+Wire Wire Line
+	8100 5800 8100 5950
+Wire Wire Line
+	7300 4900 7300 4950
+Text Label 7300 5250 2    50   ~ 0
+ESP_AO
+Text Label 7300 4950 2    50   ~ 0
+ESP_AI
+Text Label 7800 5100 0    50   ~ 0
+PLC_AI
+Text Label 7800 5500 0    50   ~ 0
+PLC_AO
+Text Label 9300 5800 2    50   ~ 0
+PLC_EN
+$Comp
+L power:GND #PWR?
+U 1 1 5E9B07D5
+P 3800 2050
+AR Path="/5D38FFAD/5E9B07D5" Ref="#PWR?"  Part="1" 
+AR Path="/5E9B07D5" Ref="#PWR012"  Part="1" 
+F 0 "#PWR012" H 3800 1800 50  0001 C CNN
+F 1 "GND" H 3805 1877 50  0000 C CNN
+F 2 "" H 3800 2050 50  0001 C CNN
+F 3 "" H 3800 2050 50  0001 C CNN
+	1    3800 2050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10150 5250 9450 5250
+Wire Wire Line
+	10150 5150 9450 5150
+Text Label 10000 5550 2    50   ~ 0
+PLC_AO
+Text Label 10000 5450 2    50   ~ 0
+PLC_AI
+Wire Wire Line
+	10150 5450 10000 5450
+Wire Wire Line
+	10000 5550 10150 5550
+Text Label 10000 5350 2    50   ~ 0
+PLC_EN
+Wire Wire Line
+	10150 5350 10000 5350
+$Comp
+L RF_Module:ESP32-WROOM-32D U1
+U 1 1 5E987311
+P 2300 5150
+F 0 "U1" H 2150 5550 50  0000 C CNN
+F 1 "ESP32-WROOM-32D" H 2200 5450 50  0000 C CNN
+F 2 "iot_aio:ESP32-WROOM-32D" H 2300 3350 50  0000 C CNN
+F 3 "https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32d_esp32-wroom-32u_datasheet_en.pdf" H 2000 5200 50  0001 C CNN
+	1    2300 5150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR05
+U 1 1 5D39BF8D
+P 2300 6550
+F 0 "#PWR05" H 2300 6300 50  0001 C CNN
+F 1 "GND" V 2305 6422 50  0000 R CNN
+F 2 "" H 2300 6550 50  0001 C CNN
+F 3 "" H 2300 6550 50  0001 C CNN
+	1    2300 6550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5D3996C4
+P 1600 3650
+AR Path="/5CD408FA/5D3996C4" Ref="#PWR?"  Part="1" 
+AR Path="/5D3996C4" Ref="#PWR01"  Part="1" 
+F 0 "#PWR01" H 1600 3500 50  0001 C CNN
+F 1 "+3.3V" H 1615 3823 50  0000 C CNN
+F 2 "" H 1600 3650 50  0001 C CNN
+F 3 "" H 1600 3650 50  0001 C CNN
+	1    1600 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_02x03_Odd_Even J1
+U 1 1 5E9B64FB
+P 8700 2800
+F 0 "J1" H 8750 3207 50  0000 C CNN
+F 1 "Conn_02x03" H 8750 3116 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical" H 8700 2400 50  0000 C CNN
+F 3 "~" H 8700 2800 50  0001 C CNN
+	1    8700 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8500 2700 8400 2700
+Wire Wire Line
+	8500 2800 8400 2800
+Wire Wire Line
+	8500 2900 8400 2900
+Wire Wire Line
+	9000 2900 9100 2900
+Text Label 8400 2700 2    50   ~ 0
+ESP_EN
+Text Label 8400 2800 2    50   ~ 0
+ESP_TXD
+Text Label 8400 2900 2    50   ~ 0
+ESP_RXD
+Text Label 9100 2900 0    50   ~ 0
+ESP_IO0
+Text Label 1600 3950 2    50   ~ 0
+ESP_EN
+Wire Wire Line
+	2900 3950 3000 3950
+Text Label 3000 3950 0    50   ~ 0
+ESP_IO0
+$Comp
+L Device:R_US R1
+U 1 1 5E9C3F53
+P 1600 3800
+F 0 "R1" H 1668 3846 50  0000 L CNN
+F 1 "10k" H 1668 3755 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 1640 3790 50  0001 C CNN
+F 3 "~" H 1600 3800 50  0001 C CNN
+	1    1600 3800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1700 3950 1600 3950
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5E9CC925
+P 2300 3650
+AR Path="/5CD408FA/5E9CC925" Ref="#PWR?"  Part="1" 
+AR Path="/5E9CC925" Ref="#PWR04"  Part="1" 
+F 0 "#PWR04" H 2300 3500 50  0001 C CNN
+F 1 "+3.3V" H 2315 3823 50  0000 C CNN
+F 2 "" H 2300 3650 50  0001 C CNN
+F 3 "" H 2300 3650 50  0001 C CNN
+	1    2300 3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2300 3650 2300 3750
+$Comp
+L power:VBUS #PWR02
+U 1 1 5E9D1132
+P 1750 1750
+F 0 "#PWR02" H 1750 1600 50  0001 C CNN
+F 1 "VBUS" H 1765 1923 50  0000 C CNN
+F 2 "" H 1750 1750 50  0001 C CNN
+F 3 "" H 1750 1750 50  0001 C CNN
+	1    1750 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E9D114A
+P 2350 2050
+AR Path="/5D38FFAD/5E9D114A" Ref="#PWR?"  Part="1" 
+AR Path="/5E9D114A" Ref="#PWR06"  Part="1" 
+F 0 "#PWR06" H 2350 1800 50  0001 C CNN
+F 1 "GND" H 2355 1877 50  0000 C CNN
+F 2 "" H 2350 2050 50  0001 C CNN
+F 3 "" H 2350 2050 50  0001 C CNN
+	1    2350 2050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2650 1750 2950 1750
+Wire Wire Line
+	1750 1750 2050 1750
+$Comp
+L power:GND #PWR?
+U 1 1 5E9D1153
+P 1750 2050
+AR Path="/5D38FFAD/5E9D1153" Ref="#PWR?"  Part="1" 
+AR Path="/5E9D1153" Ref="#PWR03"  Part="1" 
+F 0 "#PWR03" H 1750 1800 50  0001 C CNN
+F 1 "GND" H 1755 1877 50  0000 C CNN
+F 2 "" H 1750 2050 50  0001 C CNN
+F 3 "" H 1750 2050 50  0001 C CNN
+	1    1750 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E9D1159
+P 2950 2050
+AR Path="/5D38FFAD/5E9D1159" Ref="#PWR?"  Part="1" 
+AR Path="/5E9D1159" Ref="#PWR08"  Part="1" 
+F 0 "#PWR08" H 2950 1800 50  0001 C CNN
+F 1 "GND" H 2955 1877 50  0000 C CNN
+F 2 "" H 2950 2050 50  0001 C CNN
+F 3 "" H 2950 2050 50  0001 C CNN
+	1    2950 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP C3
+U 1 1 5E9D30AD
+P 3800 1900
+F 0 "C3" H 3918 1946 50  0000 L CNN
+F 1 "22u" H 3918 1855 50  0000 L CNN
+F 2 "Capacitor_Tantalum_SMD:CP_EIA-3216-18_Kemet-A" H 3838 1750 50  0001 C CNN
+F 3 "~" H 3800 1900 50  0001 C CNN
+	1    3800 1900
+	1    0    0    -1  
+$EndComp
+Connection ~ 3800 1750
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5E9D55F3
+P 3800 1750
+AR Path="/5CD408FA/5E9D55F3" Ref="#PWR?"  Part="1" 
+AR Path="/5E9D55F3" Ref="#PWR014"  Part="1" 
+F 0 "#PWR014" H 3800 1600 50  0001 C CNN
+F 1 "+3.3V" H 3815 1923 50  0000 C CNN
+F 2 "" H 3800 1750 50  0001 C CNN
+F 3 "" H 3800 1750 50  0001 C CNN
+	1    3800 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E9D86B4
+P 9550 2800
+AR Path="/5D38FFAD/5E9D86B4" Ref="#PWR?"  Part="1" 
+AR Path="/5E9D86B4" Ref="#PWR026"  Part="1" 
+F 0 "#PWR026" H 9550 2550 50  0001 C CNN
+F 1 "GND" H 9555 2627 50  0000 C CNN
+F 2 "" H 9550 2800 50  0001 C CNN
+F 3 "" H 9550 2800 50  0001 C CNN
+	1    9550 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9000 2700 9550 2700
+Wire Wire Line
+	9000 2800 9550 2800
+Text Label 3000 4050 0    50   ~ 0
+ESP_TXD
+Wire Wire Line
+	3000 4050 2900 4050
+Text Label 3000 4250 0    50   ~ 0
+ESP_RXD
+Wire Wire Line
+	3000 4250 2900 4250
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5E9E66F8
+P 10400 2700
+AR Path="/5CD408FA/5E9E66F8" Ref="#PWR?"  Part="1" 
+AR Path="/5E9E66F8" Ref="#PWR022"  Part="1" 
+F 0 "#PWR022" H 10400 2550 50  0001 C CNN
+F 1 "+3.3V" H 10415 2873 50  0000 C CNN
+F 2 "" H 10400 2700 50  0001 C CNN
+F 3 "" H 10400 2700 50  0001 C CNN
+	1    10400 2700
+	-1   0    0    -1  
+$EndComp
+Text Label 3000 4750 0    50   ~ 0
+ESP_TMS
+Wire Wire Line
+	3000 4750 2900 4750
+Wire Wire Line
+	2900 4550 3000 4550
+Text Label 3000 4550 0    50   ~ 0
+ESP_TDI
+Wire Wire Line
+	2900 4650 3000 4650
+Text Label 3000 4650 0    50   ~ 0
+ESP_TCK
+Wire Wire Line
+	2900 4850 3000 4850
+Text Label 3000 4850 0    50   ~ 0
+ESP_TDO
+$Comp
+L iot_aio_libraries:VXO78-500-M U?
+U 1 1 5E9D1138
+P 2350 1750
+AR Path="/5D38FFAD/5E9D1138" Ref="U?"  Part="1" 
+AR Path="/5E9D1138" Ref="U2"  Part="1" 
+F 0 "U2" H 2350 2083 50  0000 C CNN
+F 1 "VXO7803-500-M" H 2350 1992 50  0000 C CNN
+F 2 "iot_aio:VXO78-500-M" H 2350 1150 50  0000 C CIN
+F 3 "http://www.fairchildsemi.com/ds/LM/LM78M05.pdf" H 2350 1700 50  0001 C CNN
+	1    2350 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP C1
+U 1 1 5E9FB103
+P 1750 1900
+F 0 "C1" H 1868 1946 50  0000 L CNN
+F 1 "10u" H 1868 1855 50  0000 L CNN
+F 2 "Capacitor_Tantalum_SMD:CP_EIA-3216-18_Kemet-A" H 1788 1750 50  0001 C CNN
+F 3 "~" H 1750 1900 50  0001 C CNN
+	1    1750 1900
+	1    0    0    -1  
+$EndComp
+Connection ~ 1750 1750
+$Comp
+L Device:CP C2
+U 1 1 5E9FB78B
+P 2950 1900
+F 0 "C2" H 3068 1946 50  0000 L CNN
+F 1 "22u" H 3068 1855 50  0000 L CNN
+F 2 "Capacitor_Tantalum_SMD:CP_EIA-3216-18_Kemet-A" H 2988 1750 50  0001 C CNN
+F 3 "~" H 2950 1900 50  0001 C CNN
+	1    2950 1900
+	1    0    0    -1  
+$EndComp
+Connection ~ 2950 1750
+Wire Wire Line
+	2050 1750 2050 1900
+Text Notes 8650 3150 0    39   ~ 0
+M20-9760346  Pin Strip  (100:0,116 €)\n61200621621  Box Header (100:0,346 €)
+Text Notes 9600 6250 0    39   ~ 0
+TB001-500-09BE  Terminal block  (100:0,581 € €)
+$Comp
+L Connector_Generic:Conn_01x09 J3
+U 1 1 5E9869D3
+P 10350 5550
+F 0 "J3" H 10450 4900 50  0000 C CNN
+F 1 "Conn_01x09" H 10450 5000 50  0000 C CNN
+F 2 "iot_aio:TerminalBlock_CUI" H 10350 6350 50  0000 C CNN
+F 3 "https://eu.mouser.com/datasheet/2/670/tb001-500-1550615.pdf" H 10350 5550 50  0001 C CNN
+	1    10350 5550
+	1    0    0    1   
+$EndComp
+Text Label 3000 5050 0    50   ~ 0
+ESP_SDA
+Text Label 3000 4950 0    50   ~ 0
+ESP_SCL
+$Comp
+L power:VBUS #PWR028
+U 1 1 5CDF1C48
+P 10050 5950
+F 0 "#PWR028" H 10050 5800 50  0001 C CNN
+F 1 "VBUS" H 10065 6123 50  0000 C CNN
+F 2 "" H 10050 5950 50  0001 C CNN
+F 3 "" H 10050 5950 50  0001 C CNN
+	1    10050 5950
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	10150 5950 10050 5950
+Wire Wire Line
+	9800 5850 9800 5950
+Wire Wire Line
+	10150 5850 9800 5850
+$Comp
+L power:GND #PWR?
+U 1 1 5D39B3FB
+P 9800 5950
+AR Path="/5CBA8F72/5D39B3FB" Ref="#PWR?"  Part="1" 
+AR Path="/5D39B3FB" Ref="#PWR027"  Part="1" 
+F 0 "#PWR027" H 9800 5700 50  0001 C CNN
+F 1 "GND" H 9805 5777 50  0000 C CNN
+F 2 "" H 9800 5950 50  0001 C CNN
+F 3 "" H 9800 5950 50  0001 C CNN
+	1    9800 5950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10050 5950 10050 5750
+Wire Wire Line
+	10050 5750 10150 5750
+Connection ~ 10050 5950
+Wire Wire Line
+	9800 5850 9800 5650
+Wire Wire Line
+	9800 5650 10150 5650
+Connection ~ 9800 5850
+$Comp
+L power:VCOM #PWR025
+U 1 1 5EA1AFC6
+P 9550 2700
+F 0 "#PWR025" H 9550 2550 50  0001 C CNN
+F 1 "VCOM" H 9567 2873 50  0000 C CNN
+F 2 "" H 9550 2700 50  0001 C CNN
+F 3 "" H 9550 2700 50  0001 C CNN
+	1    9550 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D_Schottky D1
+U 1 1 5EA1BD74
+P 9950 2700
+F 0 "D1" H 9950 2916 50  0000 C CNN
+F 1 "BAT60A" H 9950 2825 50  0000 C CNN
+F 2 "iot_aio:BAT60A" H 9950 2700 50  0001 C CNN
+F 3 "https://www.infineon.com/dgdl/Infineon-BAT60ASERIES-DS-v01_01-en.pdf?fileId=db3a304313d846880113def70c9304a9" H 9950 2700 50  0001 C CNN
+	1    9950 2700
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	9550 2700 9800 2700
+Wire Wire Line
+	10100 2700 10400 2700
+$Comp
+L Device:L_Core_Ferrite L1
+U 1 1 5E9DB581
+P 3400 1750
+F 0 "L1" V 3715 1750 50  0000 C CNN
+F 1 "22u" V 3624 1750 50  0000 C CNN
+F 2 "iot_aio:HM72L-0630" H 3400 1750 50  0001 C CNN
+F 3 "https://eu.mouser.com/datasheet/2/414/HM72L-0630-Datasheet-1545449.pdf" H 3400 1750 50  0001 C CNN
+F 4 "HM72L-0630100LFTR" V 3533 1750 50  0000 C CNN "Part"
+	1    3400 1750
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3800 1750 3550 1750
+Wire Wire Line
+	3250 1750 2950 1750
+$Comp
+L Device:C C6
+U 1 1 5E9F0229
+P 6250 1850
+F 0 "C6" H 6365 1896 50  0000 L CNN
+F 1 "100n" H 6365 1805 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 6288 1700 50  0001 C CNN
+F 3 "~" H 6250 1850 50  0001 C CNN
+	1    6250 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_Push SW1
+U 1 1 5E9F1784
+P 6000 1850
+F 0 "SW1" V 5950 2150 50  0000 R CNN
+F 1 "PTS815" V 6050 2250 50  0000 R CNN
+F 2 "iot_aio:PTS815" H 6000 2050 50  0001 C CNN
+F 3 "https://eu.mouser.com/datasheet/2/60/pts815-1535658.pdf" H 6000 2050 50  0001 C CNN
+	1    6000 1850
+	0    -1   1    0   
+$EndComp
+Wire Wire Line
+	6000 1650 6250 1650
+Wire Wire Line
+	6250 1650 6250 1700
+Wire Wire Line
+	6250 2000 6250 2050
+Wire Wire Line
+	6250 2050 6000 2050
+$Comp
+L power:GND #PWR?
+U 1 1 5EA02371
+P 6000 2050
+AR Path="/5CBA8F72/5EA02371" Ref="#PWR?"  Part="1" 
+AR Path="/5EA02371" Ref="#PWR029"  Part="1" 
+F 0 "#PWR029" H 6000 1800 50  0001 C CNN
+F 1 "GND" H 6005 1877 50  0000 C CNN
+F 2 "" H 6000 2050 50  0001 C CNN
+F 3 "" H 6000 2050 50  0001 C CNN
+	1    6000 2050
+	1    0    0    -1  
+$EndComp
+Connection ~ 6000 2050
+Text Label 6000 1250 2    50   ~ 0
+ESP_EN
+Wire Wire Line
+	6000 1250 6000 1650
+Connection ~ 6000 1650
+$Comp
+L Device:R_US R10
+U 1 1 5EA2003F
+P 7050 1400
+F 0 "R10" H 7118 1446 50  0000 L CNN
+F 1 "270" H 7118 1355 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 7090 1390 50  0001 C CNN
+F 3 "~" H 7050 1400 50  0001 C CNN
+	1    7050 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5EA20055
+P 7050 2050
+AR Path="/5CBA8F72/5EA20055" Ref="#PWR?"  Part="1" 
+AR Path="/5EA20055" Ref="#PWR030"  Part="1" 
+F 0 "#PWR030" H 7050 1800 50  0001 C CNN
+F 1 "GND" H 7055 1877 50  0000 C CNN
+F 2 "" H 7050 2050 50  0001 C CNN
+F 3 "" H 7050 2050 50  0001 C CNN
+	1    7050 2050
+	1    0    0    -1  
+$EndComp
+Text Label 7050 1250 2    50   ~ 0
+ESP_DBG
+Wire Wire Line
+	7050 1550 7050 1650
+$Comp
+L Device:LED D2
+U 1 1 5EA22E3F
+P 7050 1800
+F 0 "D2" V 7089 1682 50  0000 R CNN
+F 1 "150060RS75000" V 6998 1682 50  0000 R CNN
+F 2 "LED_SMD:LED_0603_1608Metric_Castellated" H 7050 1800 50  0001 C CNN
+F 3 "~" H 7050 1800 50  0001 C CNN
+	1    7050 1800
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	7050 1950 7050 2050
+Text Label 3000 4150 0    50   ~ 0
+ESP_DBG
+Wire Wire Line
+	3000 4150 2900 4150
+Wire Wire Line
+	6600 5250 7300 5250
+Wire Wire Line
+	6600 4950 7300 4950
+$Sheet
+S 5000 4350 1000 600 
+U 5EA5BFA6
+F0 "iot_ai" 39
+F1 "iot_ai.sch" 39
+F2 "SDA" B L 5000 4800 39 
+F3 "SCL" I L 5000 4500 39 
+F4 "AI" I R 6000 4650 39 
+$EndSheet
+$Sheet
+S 5000 5250 1000 600 
+U 5EA5C45C
+F0 "iot_ao" 39
+F1 "iot_ao.sch" 39
+F2 "PWM" I L 5000 5400 39 
+F3 "AO" O R 6000 5550 39 
+F4 "OD" I L 5000 5600 39 
+F5 "~EF" O L 5000 5700 39 
+$EndSheet
+Wire Wire Line
+	6000 4650 6600 4650
+Wire Wire Line
+	6600 4650 6600 4950
+Wire Wire Line
+	6000 5550 6600 5550
+Wire Wire Line
+	6600 5550 6600 5250
+Wire Wire Line
+	2900 4950 4500 4950
+Wire Wire Line
+	4500 4950 4500 4500
+Wire Wire Line
+	4500 4500 5000 4500
+Wire Wire Line
+	5000 4800 4750 4800
+Wire Wire Line
+	4750 4800 4750 5050
+Wire Wire Line
+	4750 5050 2900 5050
+Wire Wire Line
+	5000 5400 4750 5400
+Text Label 3000 5650 0    50   ~ 0
+XTR_PWM
+Wire Wire Line
+	5000 5600 4800 5600
+Wire Wire Line
+	5000 5700 4850 5700
+Text Label 3000 5750 0    50   ~ 0
+XTR_OD
+Text Label 3000 5850 0    50   ~ 0
+XTR_EF
+Wire Wire Line
+	4750 5400 4750 5650
+Wire Wire Line
+	2900 5650 4750 5650
+Wire Wire Line
+	2900 5850 4850 5850
+Wire Wire Line
+	4850 5850 4850 5700
+Wire Wire Line
+	2900 5750 4800 5750
+Wire Wire Line
+	4800 5750 4800 5600
+$Comp
+L Device:C C12
+U 1 1 5EAD5F81
+P 5250 1850
+F 0 "C12" H 5365 1896 50  0000 L CNN
+F 1 "100n" H 5365 1805 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 5288 1700 50  0001 C CNN
+F 3 "~" H 5250 1850 50  0001 C CNN
+	1    5250 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_Push SW4
+U 1 1 5EAD5F87
+P 5000 1850
+F 0 "SW4" V 4950 2150 50  0000 R CNN
+F 1 "PTS815" V 5050 2250 50  0000 R CNN
+F 2 "iot_aio:PTS815" H 5000 2050 50  0001 C CNN
+F 3 "https://eu.mouser.com/datasheet/2/60/pts815-1535658.pdf" H 5000 2050 50  0001 C CNN
+	1    5000 1850
+	0    -1   1    0   
+$EndComp
+Wire Wire Line
+	5000 1650 5250 1650
+Wire Wire Line
+	5250 1650 5250 1700
+Wire Wire Line
+	5250 2000 5250 2050
+Wire Wire Line
+	5250 2050 5000 2050
+$Comp
+L power:GND #PWR?
+U 1 1 5EAD5F91
+P 5000 2050
+AR Path="/5CBA8F72/5EAD5F91" Ref="#PWR?"  Part="1" 
+AR Path="/5EAD5F91" Ref="#PWR0108"  Part="1" 
+F 0 "#PWR0108" H 5000 1800 50  0001 C CNN
+F 1 "GND" H 5005 1877 50  0000 C CNN
+F 2 "" H 5000 2050 50  0001 C CNN
+F 3 "" H 5000 2050 50  0001 C CNN
+	1    5000 2050
+	1    0    0    -1  
+$EndComp
+Connection ~ 5000 2050
+Text Label 5000 1250 2    50   ~ 0
+ESP_IO0
+Wire Wire Line
+	5000 1250 5000 1650
+Connection ~ 5000 1650
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5EFCCD3F
+P 3000 3650
+AR Path="/5CD408FA/5EFCCD3F" Ref="#PWR?"  Part="1" 
+AR Path="/5EFCCD3F" Ref="#PWR0109"  Part="1" 
+F 0 "#PWR0109" H 3000 3500 50  0001 C CNN
+F 1 "+3.3V" H 3015 3823 50  0000 C CNN
+F 2 "" H 3000 3650 50  0001 C CNN
+F 3 "" H 3000 3650 50  0001 C CNN
+	1    3000 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_US R17
+U 1 1 5EFCCD45
+P 3000 3800
+F 0 "R17" H 3068 3846 50  0000 L CNN
+F 1 "10k" H 3068 3755 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 3040 3790 50  0001 C CNN
+F 3 "~" H 3000 3800 50  0001 C CNN
+	1    3000 3800
+	1    0    0    -1  
+$EndComp
+Connection ~ 9550 2700
+$EndSCHEMATC

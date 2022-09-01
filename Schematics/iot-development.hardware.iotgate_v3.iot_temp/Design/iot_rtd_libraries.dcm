@@ -1,0 +1,37 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP MAX13487
+D RS485 transceiver, half duplex, dual supply, receiver/driver enable, 500kbps, SOIC-08 package
+K rs485 transceiver
+F https://datasheets.maximintegrated.com/en/ds/MAX13430E-MAX13433E.pdf
+$ENDCMP
+#
+$CMP MAX31865
+D RTD-to-Digital Converter
+F https://datasheets.maximintegrated.com/en/ds/MAX31865.pdf
+$ENDCMP
+#
+$CMP RT424024
+D Power PCB Relay RT2 DC and A
+K Dual Pole Relay
+F https://eu.mouser.com/datasheet/2/418/NG_DS_RT2_1014-728141.pdf
+$ENDCMP
+#
+$CMP SCLD-P-B-4PDT-S
+D Power PCB Relay RT2 DC and A
+K Quad Pole Relay
+F https://www.mouser.de/datasheet/2/378/sclb-1374854.pdf
+$ENDCMP
+#
+$CMP TS3A44159
+D 0.45-Ω Quad SPDT Analog Switch4-Channel 2:1 Multiplexer – Demultiplexer With Two Controls
+K Mux
+F http://www.ti.com/lit/ds/symlink/ts3a44159.pdf?ts=1587831159497
+$ENDCMP
+#
+$CMP VXO78-500-M
+D NON-ISOLATED DC SWITCHING REGULATOR
+F https://eu.mouser.com/datasheet/2/670/vxo78-500-m-1729064.pdf
+$ENDCMP
+#
+#End Doc Library

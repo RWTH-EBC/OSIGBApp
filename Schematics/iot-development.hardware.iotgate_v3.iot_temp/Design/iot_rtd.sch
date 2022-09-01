@@ -1,0 +1,1072 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 3
+Title "IoT Wireless Adapter - RTD"
+Date "2020-04-23"
+Rev ""
+Comp "ACS/EBC - RWTH Aachen University"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Wire Wire Line
+	9225 4525 9075 4525
+Wire Wire Line
+	9075 4625 9225 4625
+Wire Wire Line
+	9225 4425 9075 4425
+$Comp
+L RF_Module:ESP32-WROOM-32D U1
+U 1 1 5E987311
+P 1850 3075
+F 0 "U1" H 1700 3475 50  0000 C CNN
+F 1 "ESP32-WROOM-32D" H 1750 3375 50  0000 C CNN
+F 2 "iot_rtd:ESP32-WROOM-32D" H 1850 1275 50  0000 C CNN
+F 3 "https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32d_esp32-wroom-32u_datasheet_en.pdf" H 1550 3125 50  0001 C CNN
+	1    1850 3075
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR05
+U 1 1 5D39BF8D
+P 1850 4475
+F 0 "#PWR05" H 1850 4225 50  0001 C CNN
+F 1 "GND" V 1855 4347 50  0000 R CNN
+F 2 "" H 1850 4475 50  0001 C CNN
+F 3 "" H 1850 4475 50  0001 C CNN
+	1    1850 4475
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5D3996C4
+P 925 1575
+AR Path="/5CD408FA/5D3996C4" Ref="#PWR?"  Part="1" 
+AR Path="/5D3996C4" Ref="#PWR01"  Part="1" 
+F 0 "#PWR01" H 925 1425 50  0001 C CNN
+F 1 "+3.3V" H 940 1748 50  0000 C CNN
+F 2 "" H 925 1575 50  0001 C CNN
+F 3 "" H 925 1575 50  0001 C CNN
+	1    925  1575
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_02x03_Odd_Even J1
+U 1 1 5E9B64FB
+P 9125 2675
+F 0 "J1" H 9175 3082 50  0000 C CNN
+F 1 "Conn_02x03" H 9175 2991 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical" H 9125 2275 50  0000 C CNN
+F 3 "~" H 9125 2675 50  0001 C CNN
+	1    9125 2675
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8925 2575 8825 2575
+Wire Wire Line
+	8925 2675 8825 2675
+Wire Wire Line
+	8925 2775 8825 2775
+Wire Wire Line
+	9425 2775 9525 2775
+Text Label 8825 2575 2    50   ~ 0
+ESP_EN
+Text Label 8825 2675 2    50   ~ 0
+ESP_TXD
+Text Label 8825 2775 2    50   ~ 0
+ESP_RXD
+Text Label 9525 2775 0    50   ~ 0
+ESP_IO0
+Text Label 775  1875 2    50   ~ 0
+ESP_EN
+Wire Wire Line
+	2450 1875 2550 1875
+Text Label 2550 1875 0    50   ~ 0
+ESP_IO0
+$Comp
+L Device:R_US R1
+U 1 1 5E9C3F53
+P 925 1725
+F 0 "R1" H 993 1771 50  0000 L CNN
+F 1 "10k" H 993 1680 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 965 1715 50  0001 C CNN
+F 3 "~" H 925 1725 50  0001 C CNN
+	1    925  1725
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5E9CC925
+P 1850 1575
+AR Path="/5CD408FA/5E9CC925" Ref="#PWR?"  Part="1" 
+AR Path="/5E9CC925" Ref="#PWR04"  Part="1" 
+F 0 "#PWR04" H 1850 1425 50  0001 C CNN
+F 1 "+3.3V" H 1865 1748 50  0000 C CNN
+F 2 "" H 1850 1575 50  0001 C CNN
+F 3 "" H 1850 1575 50  0001 C CNN
+	1    1850 1575
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1850 1575 1850 1675
+$Comp
+L power:GND #PWR?
+U 1 1 5E9D86B4
+P 9975 2675
+AR Path="/5D38FFAD/5E9D86B4" Ref="#PWR?"  Part="1" 
+AR Path="/5E9D86B4" Ref="#PWR026"  Part="1" 
+F 0 "#PWR026" H 9975 2425 50  0001 C CNN
+F 1 "GND" H 9980 2502 50  0000 C CNN
+F 2 "" H 9975 2675 50  0001 C CNN
+F 3 "" H 9975 2675 50  0001 C CNN
+	1    9975 2675
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9425 2575 9975 2575
+Wire Wire Line
+	9425 2675 9975 2675
+Text Label 2550 1975 0    50   ~ 0
+ESP_TXD
+Wire Wire Line
+	2550 1975 2450 1975
+Text Label 2550 2175 0    50   ~ 0
+ESP_RXD
+Wire Wire Line
+	2550 2175 2450 2175
+Text Label 2550 2675 0    50   ~ 0
+ESP_TMS
+Wire Wire Line
+	2550 2675 2450 2675
+Wire Wire Line
+	2450 2475 2550 2475
+Text Label 2550 2475 0    50   ~ 0
+ESP_TDI
+Wire Wire Line
+	2450 2575 2550 2575
+Text Label 2550 2575 0    50   ~ 0
+ESP_TCK
+Wire Wire Line
+	2450 2775 2550 2775
+Text Label 2550 2775 0    50   ~ 0
+ESP_TDO
+Text Notes 9075 3025 0    39   ~ 0
+M20-9760346  Pin Strip  (100:0,116 €)\n61200621621  Box Header (100:0,346 €)
+$Comp
+L power:GND #PWR?
+U 1 1 5D39B3FB
+P 9075 4025
+AR Path="/5CBA8F72/5D39B3FB" Ref="#PWR?"  Part="1" 
+AR Path="/5D39B3FB" Ref="#PWR027"  Part="1" 
+F 0 "#PWR027" H 9075 3775 50  0001 C CNN
+F 1 "GND" H 9080 3852 50  0000 C CNN
+F 2 "" H 9075 4025 50  0001 C CNN
+F 3 "" H 9075 4025 50  0001 C CNN
+	1    9075 4025
+	1    0    0    1   
+$EndComp
+$Comp
+L power:VCOM #PWR025
+U 1 1 5EA1AFC6
+P 9975 2575
+F 0 "#PWR025" H 9975 2425 50  0001 C CNN
+F 1 "VCOM" H 9992 2748 50  0000 C CNN
+F 2 "" H 9975 2575 50  0001 C CNN
+F 3 "" H 9975 2575 50  0001 C CNN
+	1    9975 2575
+	1    0    0    -1  
+$EndComp
+Text Label 2550 3775 0    50   ~ 0
+ESP_DBG
+Wire Wire Line
+	2550 3775 2450 3775
+Wire Wire Line
+	9225 4225 9075 4225
+Wire Wire Line
+	9075 4325 9225 4325
+Wire Wire Line
+	9225 5025 9075 5025
+Wire Wire Line
+	9075 5125 9225 5125
+Wire Wire Line
+	9225 4925 9075 4925
+Wire Wire Line
+	9225 4725 9075 4725
+Wire Wire Line
+	9075 4825 9225 4825
+Wire Wire Line
+	9225 5525 9075 5525
+Wire Wire Line
+	9075 5625 9225 5625
+Wire Wire Line
+	9225 5425 9075 5425
+Wire Wire Line
+	9225 5225 9075 5225
+Wire Wire Line
+	9075 5325 9225 5325
+Text Label 9075 4225 2    50   ~ 0
+1_I-
+Text Label 9075 4325 2    50   ~ 0
+1_V-
+Text Label 9075 4425 2    50   ~ 0
+1_V+
+Text Label 9075 4525 2    50   ~ 0
+1_I+
+Text Label 9075 4625 2    50   ~ 0
+PLC_1I-
+Text Label 9075 4725 2    50   ~ 0
+PLC_1V-
+Text Label 9075 4825 2    50   ~ 0
+PLC_1V+
+Text Label 9075 4925 2    50   ~ 0
+PLC_1I+
+Text Label 9075 5025 2    50   ~ 0
+2_I-
+Text Label 9075 5125 2    50   ~ 0
+2_V-
+Text Label 9075 5225 2    50   ~ 0
+2_V+
+Text Label 9075 5325 2    50   ~ 0
+2_I+
+Text Label 9075 5425 2    50   ~ 0
+PLC_2I-
+Text Label 9075 5525 2    50   ~ 0
+PLC_2V-
+Text Label 9075 5625 2    50   ~ 0
+PLC_2V+
+Text Label 9075 5725 2    50   ~ 0
+PLC_2I+
+Wire Wire Line
+	9075 4025 9225 4025
+Text Label 9075 4125 2    50   ~ 0
+PLC_EN
+$Sheet
+S 2150 5525 1000 2000
+U 5EAAA4E5
+F0 "MAX31865_2" 39
+F1 "sub_max31865.sch" 39
+F2 "I+" I R 3150 7125 39 
+F3 "I-" I R 3150 5925 39 
+F4 "V+" I R 3150 6725 39 
+F5 "V-" I R 3150 6325 39 
+F6 "SDI" I L 2150 6225 39 
+F7 "SDO" O L 2150 6375 39 
+F8 "SS" I L 2150 5925 39 
+F9 "DRDY" O L 2150 5775 39 
+F10 "SCK" I L 2150 6075 39 
+$EndSheet
+$Sheet
+S 4150 5525 1000 2000
+U 5EAF6AF9
+F0 "MAX31865_1" 39
+F1 "sub_max31865.sch" 39
+F2 "I+" I R 5150 7125 39 
+F3 "I-" I R 5150 5925 39 
+F4 "V+" I R 5150 6725 39 
+F5 "V-" I R 5150 6325 39 
+F6 "SDI" I L 4150 6225 39 
+F7 "SDO" O L 4150 6375 39 
+F8 "SS" I L 4150 5925 39 
+F9 "DRDY" O L 4150 5775 39 
+F10 "SCK" I L 4150 6075 39 
+$EndSheet
+Wire Wire Line
+	2450 2975 2550 2975
+Text Label 2550 2875 0    50   ~ 0
+ESP_CS2
+Wire Wire Line
+	2450 2375 2550 2375
+Text Label 2550 2375 0    50   ~ 0
+ESP_SCK
+Wire Wire Line
+	2450 3075 2550 3075
+Text Label 2550 3075 0    50   ~ 0
+ESP_SDI
+Wire Wire Line
+	2450 2275 2550 2275
+Text Label 2550 2275 0    50   ~ 0
+ESP_SDO
+Wire Wire Line
+	2450 2875 2550 2875
+Text Label 2550 2975 0    50   ~ 0
+ESP_CS1
+Wire Wire Line
+	2150 5925 2050 5925
+Wire Wire Line
+	2150 6075 2050 6075
+Wire Wire Line
+	2150 6225 2050 6225
+Wire Wire Line
+	2150 6375 2050 6375
+Wire Wire Line
+	2150 5775 2050 5775
+Text Label 2050 6225 2    50   ~ 0
+ESP_SDI
+Text Label 2050 6375 2    50   ~ 0
+ESP_SDO
+Text Label 2050 6075 2    50   ~ 0
+ESP_SCK
+Text Label 2050 5925 2    50   ~ 0
+ESP_CS2
+Wire Wire Line
+	4150 5925 4050 5925
+Wire Wire Line
+	4150 6075 4050 6075
+Wire Wire Line
+	4150 6225 4050 6225
+Wire Wire Line
+	4150 6375 4050 6375
+Wire Wire Line
+	4150 5775 4050 5775
+Text Label 4050 6225 2    50   ~ 0
+ESP_SDI
+Text Label 4050 6375 2    50   ~ 0
+ESP_SDO
+Text Label 4050 6075 2    50   ~ 0
+ESP_SCK
+Text Label 4050 5925 2    50   ~ 0
+ESP_CS1
+$Comp
+L Device:R_US R3
+U 1 1 5EBDEE87
+P 8475 4775
+F 0 "R3" H 8543 4821 50  0000 L CNN
+F 1 "1k" H 8543 4730 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 8515 4765 50  0001 C CNN
+F 3 "~" H 8475 4775 50  0001 C CNN
+	1    8475 4775
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5EBDF4A1
+P 8475 4925
+AR Path="/5CBA8F72/5EBDF4A1" Ref="#PWR?"  Part="1" 
+AR Path="/5EBDF4A1" Ref="#PWR011"  Part="1" 
+F 0 "#PWR011" H 8475 4675 50  0001 C CNN
+F 1 "GND" H 8480 4752 50  0000 C CNN
+F 2 "" H 8475 4925 50  0001 C CNN
+F 3 "" H 8475 4925 50  0001 C CNN
+	1    8475 4925
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8475 4625 8475 4525
+Text Label 8025 4525 2    50   ~ 0
+PLC_ENX
+Wire Wire Line
+	8475 4525 8125 4525
+$Comp
+L Device:R_US R2
+U 1 1 5EBF13CC
+P 8475 4275
+F 0 "R2" H 8543 4321 50  0000 L CNN
+F 1 "6.8k" H 8543 4230 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 8515 4265 50  0001 C CNN
+F 3 "~" H 8475 4275 50  0001 C CNN
+	1    8475 4275
+	1    0    0    -1  
+$EndComp
+Connection ~ 8475 4525
+Wire Wire Line
+	8475 4525 8475 4425
+$Comp
+L Device:D_Schottky D3
+U 1 1 5EC0F01E
+P 8125 4375
+F 0 "D3" H 8125 4591 50  0000 C CNN
+F 1 "BAT60A" H 8125 4500 50  0000 C CNN
+F 2 "iot_rtd:BAT60A" H 8125 4375 50  0001 C CNN
+F 3 "https://www.infineon.com/dgdl/Infineon-BAT60ASERIES-DS-v01_01-en.pdf?fileId=db3a304313d846880113def70c9304a9" H 8125 4375 50  0001 C CNN
+	1    8125 4375
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8475 4125 9225 4125
+Connection ~ 8125 4525
+Wire Wire Line
+	8125 4525 8025 4525
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5EC16F82
+P 8125 4225
+AR Path="/5CD408FA/5EC16F82" Ref="#PWR?"  Part="1" 
+AR Path="/5EC16F82" Ref="#PWR010"  Part="1" 
+F 0 "#PWR010" H 8125 4075 50  0001 C CNN
+F 1 "+3.3V" H 8140 4398 50  0000 C CNN
+F 2 "" H 8125 4225 50  0001 C CNN
+F 3 "" H 8125 4225 50  0001 C CNN
+	1    8125 4225
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9225 5725 9075 5725
+Text Notes 9525 5025 0    39   ~ 0
+TB004-508-18BE  Terminal block  (100: 1,43 €)
+$Comp
+L Connector_Generic:Conn_01x18 J2
+U 1 1 5EA8914C
+P 9425 4825
+F 0 "J2" H 9505 4817 50  0000 L CNN
+F 1 "TB004-508-18" H 9505 4726 50  0000 L CNN
+F 2 "iot_rtd:TB004-508-18" H 9425 4825 50  0001 C CNN
+F 3 "https://www.mouser.de/datasheet/2/670/tb004-508-1550640.pdf" H 9425 4825 50  0001 C CNN
+	1    9425 4825
+	1    0    0    -1  
+$EndComp
+Text Label 3500 6325 2    50   ~ 0
+ESP_2V-
+Text Label 3500 5925 2    50   ~ 0
+ESP_2I-
+Wire Wire Line
+	3500 5925 3150 5925
+Wire Wire Line
+	3500 6325 3150 6325
+Text Label 3500 6725 2    50   ~ 0
+ESP_2V+
+Wire Wire Line
+	3500 6725 3150 6725
+Text Label 3500 7125 2    50   ~ 0
+ESP_2I+
+Wire Wire Line
+	3500 7125 3150 7125
+Text Label 5500 6325 2    50   ~ 0
+ESP_1V-
+Text Label 5500 5925 2    50   ~ 0
+ESP_1I-
+Wire Wire Line
+	5500 5925 5150 5925
+Wire Wire Line
+	5500 6325 5150 6325
+Text Label 5500 6725 2    50   ~ 0
+ESP_1V+
+Wire Wire Line
+	5500 6725 5150 6725
+Text Label 5500 7125 2    50   ~ 0
+ESP_1I+
+Wire Wire Line
+	5500 7125 5150 7125
+NoConn ~ 2050 5775
+NoConn ~ 4050 5775
+Wire Wire Line
+	10525 2575 10825 2575
+Wire Wire Line
+	9975 2575 10225 2575
+$Comp
+L Device:D_Schottky D1
+U 1 1 5EA1BD74
+P 10375 2575
+F 0 "D1" H 10375 2791 50  0000 C CNN
+F 1 "BAT60A" H 10375 2700 50  0000 C CNN
+F 2 "iot_rtd:BAT60A" H 10375 2575 50  0001 C CNN
+F 3 "https://www.infineon.com/dgdl/Infineon-BAT60ASERIES-DS-v01_01-en.pdf?fileId=db3a304313d846880113def70c9304a9" H 10375 2575 50  0001 C CNN
+	1    10375 2575
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5E9E66F8
+P 10825 2575
+AR Path="/5CD408FA/5E9E66F8" Ref="#PWR?"  Part="1" 
+AR Path="/5E9E66F8" Ref="#PWR022"  Part="1" 
+F 0 "#PWR022" H 10825 2425 50  0001 C CNN
+F 1 "+3.3V" H 10840 2748 50  0000 C CNN
+F 2 "" H 10825 2575 50  0001 C CNN
+F 3 "" H 10825 2575 50  0001 C CNN
+	1    10825 2575
+	-1   0    0    -1  
+$EndComp
+Connection ~ 5275 1650
+$Comp
+L power:GND #PWR?
+U 1 1 5EA02371
+P 5275 1650
+AR Path="/5CBA8F72/5EA02371" Ref="#PWR?"  Part="1" 
+AR Path="/5EA02371" Ref="#PWR029"  Part="1" 
+F 0 "#PWR029" H 5275 1400 50  0001 C CNN
+F 1 "GND" H 5280 1477 50  0000 C CNN
+F 2 "" H 5275 1650 50  0001 C CNN
+F 3 "" H 5275 1650 50  0001 C CNN
+	1    5275 1650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5525 1650 5275 1650
+Wire Wire Line
+	925  1875 775  1875
+Wire Wire Line
+	5275 1250 5525 1250
+$Comp
+L Switch:SW_Push SW1
+U 1 1 5E9F1784
+P 5275 1450
+F 0 "SW1" V 5225 1750 50  0000 R CNN
+F 1 "PTS815" V 5325 1850 50  0000 R CNN
+F 2 "iot_rtd:PTS815" H 5275 1650 50  0001 C CNN
+F 3 "https://eu.mouser.com/datasheet/2/60/pts815-1535658.pdf" H 5275 1650 50  0001 C CNN
+	1    5275 1450
+	0    -1   1    0   
+$EndComp
+$Comp
+L Device:C C6
+U 1 1 5E9F0229
+P 5525 1450
+F 0 "C6" H 5640 1496 50  0000 L CNN
+F 1 "100n" H 5640 1405 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 5563 1300 50  0001 C CNN
+F 3 "~" H 5525 1450 50  0001 C CNN
+	1    5525 1450
+	1    0    0    -1  
+$EndComp
+Connection ~ 925  1875
+Wire Wire Line
+	925  1875 1250 1875
+Wire Wire Line
+	9625 1575 9625 1675
+$Comp
+L power:GND #PWR?
+U 1 1 5ECA4573
+P 9625 1675
+AR Path="/5D38FFAD/5ECA4573" Ref="#PWR?"  Part="1" 
+AR Path="/5ECA4573" Ref="#PWR03"  Part="1" 
+F 0 "#PWR03" H 9625 1425 50  0001 C CNN
+F 1 "GND" H 9630 1502 50  0000 C CNN
+F 2 "" H 9625 1675 50  0001 C CNN
+F 3 "" H 9625 1675 50  0001 C CNN
+	1    9625 1675
+	1    0    0    -1  
+$EndComp
+Connection ~ 9625 1175
+Wire Wire Line
+	9625 1175 9325 1175
+Wire Wire Line
+	9125 1475 9125 1675
+$Comp
+L power:GND #PWR?
+U 1 1 5EC85768
+P 9125 1675
+AR Path="/5D38FFAD/5EC85768" Ref="#PWR?"  Part="1" 
+AR Path="/5EC85768" Ref="#PWR02"  Part="1" 
+F 0 "#PWR02" H 9125 1425 50  0001 C CNN
+F 1 "GND" H 9130 1502 50  0000 C CNN
+F 2 "" H 9125 1675 50  0001 C CNN
+F 3 "" H 9125 1675 50  0001 C CNN
+	1    9125 1675
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8425 1575 8425 1675
+Wire Wire Line
+	8425 1175 8425 1275
+Wire Wire Line
+	8925 1175 8425 1175
+$Comp
+L Device:Q_PMOS_GSD Q1
+U 1 1 5EC32099
+P 9125 1275
+F 0 "Q1" V 9467 1275 50  0000 C CNN
+F 1 "Si2323" V 9376 1275 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 9325 1375 50  0001 C CNN
+F 3 "https://www.mouser.de/datasheet/2/427/si2323dds-1764595.pdf" H 9125 1275 50  0001 C CNN
+	1    9125 1275
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:Battery_Cell BT1
+U 1 1 5EC31827
+P 8425 1475
+F 0 "BT1" H 8675 1625 50  0000 R CNN
+F 1 "LiFePo4 18650" H 9125 1525 50  0000 R CNN
+F 2 "iot_rtd:BatteryHolder_Keystone_1043_1x18650" V 8425 1535 50  0001 C CNN
+F 3 "https://eu.mouser.com/datasheet/2/215/1043-745411.pdf" V 8425 1535 50  0001 C CNN
+	1    8425 1475
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	9625 1275 9625 1175
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5E9D55F3
+P 9625 1175
+AR Path="/5CD408FA/5E9D55F3" Ref="#PWR?"  Part="1" 
+AR Path="/5E9D55F3" Ref="#PWR014"  Part="1" 
+F 0 "#PWR014" H 9625 1025 50  0001 C CNN
+F 1 "+3.3V" H 9640 1348 50  0000 C CNN
+F 2 "" H 9625 1175 50  0001 C CNN
+F 3 "" H 9625 1175 50  0001 C CNN
+	1    9625 1175
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP C4
+U 1 1 5E9D3A3D
+P 9625 1425
+F 0 "C4" H 9743 1471 50  0000 L CNN
+F 1 "10u" H 9743 1380 50  0000 L CNN
+F 2 "Capacitor_Tantalum_SMD:CP_EIA-3216-18_Kemet-A" H 9663 1275 50  0001 C CNN
+F 3 "~" H 9625 1425 50  0001 C CNN
+	1    9625 1425
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E9B07D5
+P 8425 1675
+AR Path="/5D38FFAD/5E9B07D5" Ref="#PWR?"  Part="1" 
+AR Path="/5E9B07D5" Ref="#PWR012"  Part="1" 
+F 0 "#PWR012" H 8425 1425 50  0001 C CNN
+F 1 "GND" H 8430 1502 50  0000 C CNN
+F 2 "" H 8425 1675 50  0001 C CNN
+F 3 "" H 8425 1675 50  0001 C CNN
+	1    8425 1675
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10375 1600 10375 1700
+$Comp
+L Device:LED D2
+U 1 1 5EA22E3F
+P 10375 1050
+F 0 "D2" V 10414 932 50  0000 R CNN
+F 1 "150060RS75000" V 10323 932 50  0000 R CNN
+F 2 "LED_SMD:LED_0603_1608Metric_Castellated" H 10375 1050 50  0001 C CNN
+F 3 "https://eu.mouser.com/datasheet/2/445/150060RS75000-1715052.pdf" H 10375 1050 50  0001 C CNN
+	1    10375 1050
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	10375 1200 10375 1300
+Text Label 10375 900  2    50   ~ 0
+ESP_DBG
+$Comp
+L power:GND #PWR?
+U 1 1 5EA20055
+P 10375 1700
+AR Path="/5CBA8F72/5EA20055" Ref="#PWR?"  Part="1" 
+AR Path="/5EA20055" Ref="#PWR030"  Part="1" 
+F 0 "#PWR030" H 10375 1450 50  0001 C CNN
+F 1 "GND" H 10380 1527 50  0000 C CNN
+F 2 "" H 10375 1700 50  0001 C CNN
+F 3 "" H 10375 1700 50  0001 C CNN
+	1    10375 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_US R10
+U 1 1 5EA2003F
+P 10375 1450
+F 0 "R10" H 10443 1496 50  0000 L CNN
+F 1 "270" H 10443 1405 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 10415 1440 50  0001 C CNN
+F 3 "~" H 10375 1450 50  0001 C CNN
+	1    10375 1450
+	1    0    0    -1  
+$EndComp
+Connection ~ 6425 2625
+Connection ~ 3975 2625
+Wire Wire Line
+	3575 2625 3975 2625
+$Comp
+L Device:C C?
+U 1 1 5EAE9086
+P 3575 2775
+AR Path="/5EAAA4E5/5EAE9086" Ref="C?"  Part="1" 
+AR Path="/5EAF6AF9/5EAE9086" Ref="C?"  Part="1" 
+AR Path="/5EAE9086" Ref="C9"  Part="1" 
+F 0 "C9" H 3460 2729 50  0000 R CNN
+F 1 "100n" H 3460 2820 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 3613 2625 50  0001 C CNN
+F 3 "~" H 3575 2775 50  0001 C CNN
+	1    3575 2775
+	1    0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5EAE9080
+P 3575 2925
+AR Path="/5D5FBA31/5CDC79B3/5EAE9080" Ref="#PWR?"  Part="1" 
+AR Path="/5D5FB98D/5CDC79B3/5EAE9080" Ref="#PWR?"  Part="1" 
+AR Path="/5D5FBA31/5D66D759/5EAE9080" Ref="#PWR?"  Part="1" 
+AR Path="/5EAAA4E5/5EAE9080" Ref="#PWR?"  Part="1" 
+AR Path="/5EAF6AF9/5EAE9080" Ref="#PWR?"  Part="1" 
+AR Path="/5EAE9080" Ref="#PWR0102"  Part="1" 
+F 0 "#PWR0102" H 3575 2675 50  0001 C CNN
+F 1 "GND" H 3580 2752 50  0000 C CNN
+F 2 "" H 3575 2925 50  0001 C CNN
+F 3 "" H 3575 2925 50  0001 C CNN
+	1    3575 2925
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	6025 2625 6425 2625
+$Comp
+L Device:C C?
+U 1 1 5EAE2F08
+P 6025 2775
+AR Path="/5EAAA4E5/5EAE2F08" Ref="C?"  Part="1" 
+AR Path="/5EAF6AF9/5EAE2F08" Ref="C?"  Part="1" 
+AR Path="/5EAE2F08" Ref="C10"  Part="1" 
+F 0 "C10" H 5910 2729 50  0000 R CNN
+F 1 "100n" H 5910 2820 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 6063 2625 50  0001 C CNN
+F 3 "~" H 6025 2775 50  0001 C CNN
+	1    6025 2775
+	1    0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5EAE2F02
+P 6025 2925
+AR Path="/5D5FBA31/5CDC79B3/5EAE2F02" Ref="#PWR?"  Part="1" 
+AR Path="/5D5FB98D/5CDC79B3/5EAE2F02" Ref="#PWR?"  Part="1" 
+AR Path="/5D5FBA31/5D66D759/5EAE2F02" Ref="#PWR?"  Part="1" 
+AR Path="/5EAAA4E5/5EAE2F02" Ref="#PWR?"  Part="1" 
+AR Path="/5EAF6AF9/5EAE2F02" Ref="#PWR?"  Part="1" 
+AR Path="/5EAE2F02" Ref="#PWR0101"  Part="1" 
+F 0 "#PWR0101" H 6025 2675 50  0001 C CNN
+F 1 "GND" H 6030 2752 50  0000 C CNN
+F 2 "" H 6025 2925 50  0001 C CNN
+F 3 "" H 6025 2925 50  0001 C CNN
+	1    6025 2925
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5EA83590
+P 3975 2625
+AR Path="/5CD408FA/5EA83590" Ref="#PWR?"  Part="1" 
+AR Path="/5EA83590" Ref="#PWR06"  Part="1" 
+F 0 "#PWR06" H 3975 2475 50  0001 C CNN
+F 1 "+3.3V" H 3990 2798 50  0000 C CNN
+F 2 "" H 3975 2625 50  0001 C CNN
+F 3 "" H 3975 2625 50  0001 C CNN
+	1    3975 2625
+	1    0    0    -1  
+$EndComp
+$Comp
+L iot_rtd_libraries:TS3A44159 K1
+U 1 1 5EA8358A
+P 3975 3325
+F 0 "K1" V 3225 3125 50  0000 C CNN
+F 1 "TS3A44159" V 3325 2975 50  0000 C CNN
+F 2 "Package_SO:TSSOP-16_4.4x5mm_P0.65mm" H 4575 2650 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/ts3a44159.pdf?ts=1587831159497" H 3975 3325 50  0001 C CNN
+	1    3975 3325
+	0    -1   1    0   
+$EndComp
+Wire Wire Line
+	3025 3425 3675 3425
+Text Label 3025 3425 0    50   ~ 0
+ESP_2I+
+Wire Wire Line
+	3025 4625 3675 4625
+Text Label 3025 4625 0    50   ~ 0
+ESP_2V+
+Wire Wire Line
+	3025 4225 3675 4225
+Wire Wire Line
+	3025 3825 3675 3825
+Text Label 3025 3825 0    50   ~ 0
+ESP_2I-
+Text Label 3025 4225 0    50   ~ 0
+ESP_2V-
+Wire Wire Line
+	3225 3225 3675 3225
+Text Label 3225 3225 0    50   ~ 0
+PLC_2I+
+Wire Wire Line
+	3225 4425 3675 4425
+Text Label 3225 4425 0    50   ~ 0
+PLC_2V+
+Text Label 4725 3325 0    50   ~ 0
+2_I+
+Text Label 4700 4525 0    50   ~ 0
+2_V+
+Wire Wire Line
+	4275 3325 4725 3325
+Wire Wire Line
+	4275 4525 4700 4525
+Wire Wire Line
+	4275 3725 4700 3725
+Wire Wire Line
+	4275 4125 4700 4125
+Wire Wire Line
+	3225 4025 3675 4025
+Wire Wire Line
+	3225 3625 3675 3625
+Wire Wire Line
+	4275 2925 4725 2925
+$Comp
+L power:GND #PWR?
+U 1 1 5EA8356F
+P 3975 5025
+AR Path="/5CBA8F72/5EA8356F" Ref="#PWR?"  Part="1" 
+AR Path="/5EA8356F" Ref="#PWR08"  Part="1" 
+F 0 "#PWR08" H 3975 4775 50  0001 C CNN
+F 1 "GND" H 3980 4852 50  0000 C CNN
+F 2 "" H 3975 5025 50  0001 C CNN
+F 3 "" H 3975 5025 50  0001 C CNN
+	1    3975 5025
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3975 4875 3975 5025
+Text Label 3225 3625 0    50   ~ 0
+PLC_2I-
+Text Label 3225 4025 0    50   ~ 0
+PLC_2V-
+Text Label 4725 2925 2    50   ~ 0
+PLC_ENX
+Text Label 4700 4125 0    50   ~ 0
+2_V-
+Text Label 4700 3725 0    50   ~ 0
+2_I-
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5EA7801E
+P 6425 2625
+AR Path="/5CD408FA/5EA7801E" Ref="#PWR?"  Part="1" 
+AR Path="/5EA7801E" Ref="#PWR09"  Part="1" 
+F 0 "#PWR09" H 6425 2475 50  0001 C CNN
+F 1 "+3.3V" H 6440 2798 50  0000 C CNN
+F 2 "" H 6425 2625 50  0001 C CNN
+F 3 "" H 6425 2625 50  0001 C CNN
+	1    6425 2625
+	1    0    0    -1  
+$EndComp
+$Comp
+L iot_rtd_libraries:TS3A44159 K2
+U 1 1 5EA6779B
+P 6425 3325
+F 0 "K2" V 5675 3125 50  0000 C CNN
+F 1 "TS3A44159" V 5775 2975 50  0000 C CNN
+F 2 "Package_SO:TSSOP-16_4.4x5mm_P0.65mm" H 7025 2650 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/ts3a44159.pdf?ts=1587831159497" H 6425 3325 50  0001 C CNN
+	1    6425 3325
+	0    -1   1    0   
+$EndComp
+Wire Wire Line
+	5475 3425 6125 3425
+Text Label 5475 3425 0    50   ~ 0
+ESP_1I+
+Wire Wire Line
+	5475 4625 6125 4625
+Text Label 5475 4625 0    50   ~ 0
+ESP_1V+
+Wire Wire Line
+	5475 4225 6125 4225
+Wire Wire Line
+	5475 3825 6125 3825
+Text Label 5475 3825 0    50   ~ 0
+ESP_1I-
+Text Label 5475 4225 0    50   ~ 0
+ESP_1V-
+Wire Wire Line
+	5675 3225 6125 3225
+Text Label 5675 3225 0    50   ~ 0
+PLC_1I+
+Wire Wire Line
+	5675 4425 6125 4425
+Text Label 5675 4425 0    50   ~ 0
+PLC_1V+
+Text Label 7175 3325 0    50   ~ 0
+1_I+
+Text Label 7175 4525 0    50   ~ 0
+1_V+
+Wire Wire Line
+	6725 4525 7175 4525
+Wire Wire Line
+	6725 4125 7175 4125
+Wire Wire Line
+	6725 3325 7175 3325
+Wire Wire Line
+	6725 3725 7175 3725
+Wire Wire Line
+	5675 4025 6125 4025
+Wire Wire Line
+	5675 3625 6125 3625
+Wire Wire Line
+	6725 2925 7175 2925
+$Comp
+L power:GND #PWR?
+U 1 1 5E99E0A6
+P 6425 5025
+AR Path="/5CBA8F72/5E99E0A6" Ref="#PWR?"  Part="1" 
+AR Path="/5E99E0A6" Ref="#PWR024"  Part="1" 
+F 0 "#PWR024" H 6425 4775 50  0001 C CNN
+F 1 "GND" H 6430 4852 50  0000 C CNN
+F 2 "" H 6425 5025 50  0001 C CNN
+F 3 "" H 6425 5025 50  0001 C CNN
+	1    6425 5025
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6425 4875 6425 5025
+Text Label 5675 3625 0    50   ~ 0
+PLC_1I-
+Text Label 5675 4025 0    50   ~ 0
+PLC_1V-
+Text Label 7175 2925 2    50   ~ 0
+PLC_ENX
+Text Label 7175 4125 0    50   ~ 0
+1_V-
+Text Label 7175 3725 0    50   ~ 0
+1_I-
+Connection ~ 9975 2575
+Text Label 5275 1000 0    50   ~ 0
+ESP_EN
+Wire Wire Line
+	5275 1000 5275 1250
+Connection ~ 5275 1250
+Wire Wire Line
+	5525 1250 5525 1300
+Wire Wire Line
+	5525 1650 5525 1600
+Connection ~ 6275 1650
+$Comp
+L power:GND #PWR?
+U 1 1 5EFF7D8C
+P 6275 1650
+AR Path="/5CBA8F72/5EFF7D8C" Ref="#PWR?"  Part="1" 
+AR Path="/5EFF7D8C" Ref="#PWR0103"  Part="1" 
+F 0 "#PWR0103" H 6275 1400 50  0001 C CNN
+F 1 "GND" H 6280 1477 50  0000 C CNN
+F 2 "" H 6275 1650 50  0001 C CNN
+F 3 "" H 6275 1650 50  0001 C CNN
+	1    6275 1650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6525 1650 6275 1650
+Wire Wire Line
+	6275 1250 6525 1250
+$Comp
+L Switch:SW_Push SW2
+U 1 1 5EFF7D94
+P 6275 1450
+F 0 "SW2" V 6225 1750 50  0000 R CNN
+F 1 "PTS815" V 6325 1850 50  0000 R CNN
+F 2 "iot_rtd:PTS815" H 6275 1650 50  0001 C CNN
+F 3 "https://eu.mouser.com/datasheet/2/60/pts815-1535658.pdf" H 6275 1650 50  0001 C CNN
+	1    6275 1450
+	0    -1   1    0   
+$EndComp
+$Comp
+L Device:C C11
+U 1 1 5EFF7D9A
+P 6525 1450
+F 0 "C11" H 6640 1496 50  0000 L CNN
+F 1 "100n" H 6640 1405 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 6563 1300 50  0001 C CNN
+F 3 "~" H 6525 1450 50  0001 C CNN
+	1    6525 1450
+	1    0    0    -1  
+$EndComp
+Text Label 6275 1000 0    50   ~ 0
+ESP_IO0
+Wire Wire Line
+	6275 1000 6275 1250
+Connection ~ 6275 1250
+Wire Wire Line
+	6525 1250 6525 1300
+Wire Wire Line
+	6525 1650 6525 1600
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5EF3A925
+P 2550 1575
+AR Path="/5CD408FA/5EF3A925" Ref="#PWR?"  Part="1" 
+AR Path="/5EF3A925" Ref="#PWR0104"  Part="1" 
+F 0 "#PWR0104" H 2550 1425 50  0001 C CNN
+F 1 "+3.3V" H 2565 1748 50  0000 C CNN
+F 2 "" H 2550 1575 50  0001 C CNN
+F 3 "" H 2550 1575 50  0001 C CNN
+	1    2550 1575
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_US R6
+U 1 1 5EF3A92B
+P 2550 1725
+F 0 "R6" H 2618 1771 50  0000 L CNN
+F 1 "10k" H 2618 1680 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 2590 1715 50  0001 C CNN
+F 3 "~" H 2550 1725 50  0001 C CNN
+	1    2550 1725
+	1    0    0    -1  
+$EndComp
+$Comp
+L Power_Supervisor:LM809 U4
+U 1 1 5EFA6247
+P 4425 1250
+F 0 "U4" H 4195 1296 50  0000 R CNN
+F 1 "TLV803S" H 4195 1205 50  0000 R CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 4725 1350 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm809.pdf" H 4725 1350 50  0001 C CNN
+	1    4425 1250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5275 1250 4725 1250
+$Comp
+L power:GND #PWR?
+U 1 1 5EFD0FD2
+P 4425 1650
+AR Path="/5CBA8F72/5EFD0FD2" Ref="#PWR?"  Part="1" 
+AR Path="/5EFD0FD2" Ref="#PWR0105"  Part="1" 
+F 0 "#PWR0105" H 4425 1400 50  0001 C CNN
+F 1 "GND" H 4430 1477 50  0000 C CNN
+F 2 "" H 4425 1650 50  0001 C CNN
+F 3 "" H 4425 1650 50  0001 C CNN
+	1    4425 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C12
+U 1 1 5EFD11B8
+P 3800 1275
+F 0 "C12" H 3915 1321 50  0000 L CNN
+F 1 "100n" H 3915 1230 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 3838 1125 50  0001 C CNN
+F 3 "~" H 3800 1275 50  0001 C CNN
+	1    3800 1275
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5EFD170D
+P 3800 1650
+AR Path="/5CBA8F72/5EFD170D" Ref="#PWR?"  Part="1" 
+AR Path="/5EFD170D" Ref="#PWR0106"  Part="1" 
+F 0 "#PWR0106" H 3800 1400 50  0001 C CNN
+F 1 "GND" H 3805 1477 50  0000 C CNN
+F 2 "" H 3800 1650 50  0001 C CNN
+F 3 "" H 3800 1650 50  0001 C CNN
+	1    3800 1650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3800 1425 3800 1650
+Wire Wire Line
+	4425 850  3800 850 
+Wire Wire Line
+	3800 850  3800 1125
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5EFDCF0C
+P 3800 850
+AR Path="/5CD408FA/5EFDCF0C" Ref="#PWR?"  Part="1" 
+AR Path="/5EFDCF0C" Ref="#PWR0107"  Part="1" 
+F 0 "#PWR0107" H 3800 700 50  0001 C CNN
+F 1 "+3.3V" H 3815 1023 50  0000 C CNN
+F 2 "" H 3800 850 50  0001 C CNN
+F 3 "" H 3800 850 50  0001 C CNN
+	1    3800 850 
+	1    0    0    -1  
+$EndComp
+Connection ~ 3800 850 
+$EndSCHEMATC
