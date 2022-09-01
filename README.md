@@ -48,7 +48,7 @@ We kindly ask all academic publications employing components of AIO for IoT_WA t
 
 
 # Contact
-[![EONERC EBC Logo](doc/eonerc_logo.png)](http://www.ebc.eonerc.rwth-aachen.de)
+[![EONERC EBC Logo](Firmware/doc/eonerc_logo.png)](http://www.ebc.eonerc.rwth-aachen.de)
 
 - [Kai Droste](mailto:kai.droste@eonerc.rwth-aachen.de)
 - [Markus Schraven](mailto:mschrave@eonerc.rwth-aachen.de)
