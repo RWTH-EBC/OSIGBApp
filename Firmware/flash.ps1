@@ -17,7 +17,7 @@ switch($opt)
     $target = 'dio'
 }
 2 { Write-Host -ForegroundColor Yellow "Compile for Temperature board"
-$target = 'tmp'
+$target = 'temp'
 }
 3 { }
 }

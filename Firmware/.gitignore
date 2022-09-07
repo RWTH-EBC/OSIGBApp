@@ -6,6 +6,6 @@ tmp/
 .vscode/*
 
 # Files
-sdkconfig
+# sdkconfig
 sdkconfig.old
 sdkconfig.orig
