@@ -35,7 +35,7 @@ We kindly ask all academic publications employing components of AIO for IoT_WA t
 
 
 <!--  - Kai Droste "[Development of a cloud controlled building automation and comparison with the current state of the art](https://git-ce.rwth-aachen.de/ebc/projects/ebc0449_bmwi_nextgenbat_ga/iot-development/iot-development.dissemination/theses/development-of-a-cloud-controlled-building-automation-and-comparison-with-the-current-state-of-the-art)", 2020 Masterthesis   -->
-- M. H. Schraven, K. Droste, C. Guarnieri Caló Carducci, D. Müller, A. Monti, "Open-Source Internet of Things Gateways for Building Automation Applications", submitted to IEEE Internet of Things Journals (08-Jul-2022) (Under review)
+- **M. H. Schraven, K. Droste, C. Guarnieri Caló Carducci, D. Müller, A. Monti, "Open-Source Internet of Things Gateways for Building Automation Applications", Unpublished research**
 - M.H. Schraven, C. Guarnieri Calò Carducci, M.A. Baranski, D. Mueller, A. Monti, “Designing a Development Board for Research on IoT Appli-cations in Building Automation Systems,” 36th International Symposiumon  Automation  and  Robotics  in  Construction  (ISARC  2019),  Banff,Canada, 2019, pp. 82-90, [DOI: 10.22260/ISARC2019/0012](https://doi.org/10.22260/ISARC2019/0012)
 - C. Guarnieri Calò Carducci, A. Monti, M. H. Schraven, M. Schumacher and D. Mueller, “Enabling ESP32-based IoT Applications in Building Automation Systems,” 2019 II Workshop on Metrology for Industry 4.0 and IoT (MetroInd4.0&IoT), Naples, Italy, 2019, pp. 306-311, [DOI: 10.1109/METROI4.2019.8792852](https://doi.org/10.1109/METROI4.2019.8792852)
 
