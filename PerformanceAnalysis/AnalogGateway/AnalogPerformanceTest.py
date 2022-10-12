@@ -20,7 +20,14 @@ file_exists = os.path.isfile(path)
 sleep_time = 200          # time in seconds for changing value
 
 class analog_performance_test():
+    '''
+        This class performs the analog performance test. 
+        The listen function reads the actual variable from the PLC and from the Gateway.
 
+        Then there are the functions for performing the voltage or current in- and outputs tests. 
+        Those tests needs to be run separately because the test setup needs to be configured for each function. 
+
+    '''
     def __init__(self):
         self.ads_instance = ads.ads()
         self.mqtt_instance = mqtt.mqtt()
@@ -30,7 +37,6 @@ class analog_performance_test():
         self.mqtt_instance.client.subscribe("#", qos=0)
         self.mqtt_instance.on_message = self.listen
         self.mqtt_instance.start_mqtt()
-        # self.mode = 'voltage_input'
         self.mode = 'idle'
         self.file_exists = file_exists
         self.gwValue = None
@@ -38,21 +44,7 @@ class analog_performance_test():
     def listen(self, client=None, userdata=None, msg=None):
         try:
             with open(path, 'a', newline='') as f:
-                # fieldnames = ['name', "value", 'timestamp']
-                # writer = csv.DictWriter(f, fieldnames=fieldnames)
-                # if not file_exists:
-                #     writer.writeheader()  # file doesn't exist yet, write a header
-                # msg.payload = ast.literal_eval(msg.payload.decode("utf-8"))
-                # gw_temp={'name':'Temperature Gateway', 
-                #          'value': msg.payload['Temperature Gateway'],
-                #          'timestamp':str(datetime.datetime.now().isoformat())}
-                # print(gw_temp)
-                # writer.writerow(gw_temp)
-                # plc_temp={'name':'Temperature PLC', 
-                #           'value': float(self.ads_instance.read(var='GVL_default.el3202_ch1')/100),
-                #           'timestamp':str(datetime.datetime.now().isoformat())}
-                # print(plc_temp)
-                # writer.writerow(plc_temp)
+
                 if self.mode == "voltage_input" or self.mode == "voltage_output" or self.mode == "idle":
                     fieldnames = ['Voltage Gateway', "Voltage PLC", 'timestamp', 'test sequence']
                 else:
@@ -124,11 +116,6 @@ class analog_performance_test():
                 writer.writerow(row)
         except: 
             pass
-        # except KeyboardInterrupt():
-        #     print('Abort')
-        #     self.mqtt_instance.stop_mqtt()
-        #     self.mqtt_instance.disconnect()
-        #     # self.ads_instance.disconnect()
 
     def block_main_thread(self):
         while True:
