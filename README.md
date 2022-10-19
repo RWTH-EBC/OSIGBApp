@@ -14,6 +14,7 @@ Here, the following signals are supported:
 - Analog communication (0-10 V, 0-20 mA)
 - Resistive measurements of passive RTD-probes (2,3,4-wire)
 - Digital communication via RS-485/EIA-485 (for instance used in serial Modbus RTU or BACnet MS/TP communication)
+
 Core component of the gateways is the ESP32 microcontroller.
 Hence, the firmware was developed using the Espressif IoT Development Framework [ESP-IDF](https://github.com/espressif/esp-idf), which is the official development framework provided by the manufacturer for the [ESP32](https://espressif.com/en/products/hardware/esp32/overview) chip.
 Accordingly, the developed [firmware](https://github.com/RWTH-EBC/OSIGBApp/tree/main/Firmware) is provided as well in this repository. 
