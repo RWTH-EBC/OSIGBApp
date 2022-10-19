@@ -18,9 +18,9 @@ The software is developed for three types of Gateways:
 
 ## Documentation:
 - The user Manual "how to operate the gateways" can be found [here](Documentation/manual.pdf). 
-- For using the software, [ESP-IDF](https://github.com/espressif/esp-idf) is needed. We also recommend to use [VScode](https://code.visualstudio.com/) with the ESP-idf extension for programming.
-- Furthermore, Tips for using the Menuconfig with this software can be found in the Wiki of the repository.
-- All functions in the code are commented and a documentation is generated with [Doxygen](https://github.com/doxygen/doxygen). The result can be found in the DOC folder. You have to clone the repository and open doc/doxygen/html/index.html to view the complete documentation.
+- For using the software, [ESP-IDF](https://github.com/espressif/esp-idf) is needed. We also recommend to use [VScode](https://code.visualstudio.com/) with the ESP-IDF extension for programming.
+- Furthermore, tips for using the Menuconfig with this software can be found in the Wiki of the repository.
+- All functions in the code are commented and a documentation is generated with [Doxygen](https://github.com/doxygen/doxygen). The result can be found in the [DOC folder](https://github.com/RWTH-EBC/OSIGBApp/tree/main/Firmware/doc). You have to clone the repository and open doc/doxygen/html/index.html to view the complete documentation.
 
 - Documentation on how to build the Aio Configurator webpage can be found here: [AIO Configurator](Firmware/doc/aio_configurator.md)
   - The IoT-AIO Configurator is a web page that uses HTML forms to configure the IoT Wireless Adapter.
